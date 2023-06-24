@@ -5,7 +5,14 @@ const todoList = document.querySelector('.todo-list')
 
 addNewButton.addEventListener('click', () => {
   let itemContent = prompt("What do you want to add?");
+
   const newListItem = document.createElement('li');
+  const newCheckbox = document.createElement('input');
+  newCheckbox.setAttribute('type', 'checkbox');
+  newCheckbox.className = 'checkbox';
+
   newListItem.textContent = itemContent;
+
+  newListItem.prepend(newCheckbox);
   todoList.appendChild(newListItem);
 })
