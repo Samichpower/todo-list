@@ -16,6 +16,10 @@ addNewItem.addEventListener('click', () => {
   newListItem.textContent = itemContent;
   deleteButton.textContent = 'X';
 
+  deleteButton.addEventListener('click', () => {
+    newListItem.remove();
+  })
+
   newListItem.prepend(newCheckbox);
   newListItem.prepend(deleteButton);
   todoList.appendChild(newListItem);
