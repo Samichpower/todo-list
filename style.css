@@ -50,6 +50,12 @@ h1 {
   list-style-type: none;
 }
 
+.todo-list li {
+  background-color:whitesmoke;
+  margin: 5px 0px;
+  padding: 9px;
+}
+
 
 .bottom-content {
   display: flex;
