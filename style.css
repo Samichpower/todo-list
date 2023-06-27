@@ -1,5 +1,6 @@
 * {
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
   margin: 0;
   padding: 0;
 }
@@ -15,9 +16,36 @@ body {
 .todo-list-container {
   padding: 20px;
   background-color: white;
-  width: 400px;
 }
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+
+
+.creation-container {
+  display: flex;
+  gap: 5px;
+}
+
+#new-todo {
+  flex-grow: 1;
+}
+
+#add-new {
+  width: 100%;
+}
+
+
 
 .todo-list {
   list-style-type: none;
+}
+
+
+.bottom-content {
+  display: flex;
+  margin-top: 10px;
 }
