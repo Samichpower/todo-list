@@ -30,12 +30,18 @@ h1 {
   gap: 5px;
 }
 
+#new-li-button {
+  width: 45px;
+}
+
 #new-todo {
   flex-grow: 1;
 }
 
 #add-new {
+  box-sizing: border-box;
   width: 100%;
+  padding: 9px;
 }
 
 
@@ -47,5 +53,6 @@ h1 {
 
 .bottom-content {
   display: flex;
+  justify-content: space-between;
   margin-top: 10px;
 }
