@@ -33,7 +33,9 @@ h1 {
 }
 
 #new-li-button {
-  width: 45px;
+  width: 50px;
+  font-size: 30px;
+  font-weight: 600;
 }
 
 #new-todo {
@@ -61,6 +63,18 @@ h1 {
 
 .bottom-content {
   display: flex;
+  align-items: baseline;
   justify-content: space-between;
   margin-top: 20px;
+}
+
+#clear {
+  padding: 5px 10px;
+}
+
+.button-style {
+  color: white;
+  background-color:rgb(154, 74, 228);
+  border: 0px;
+  border-radius: 3px;
 }
