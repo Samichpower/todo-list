@@ -34,7 +34,7 @@ function createNewListItem() {
 
 const clearAllButton = document.getElementById('clear-all');
 clearAllButton.addEventListener('click', () => {
-  todoList.innerHTML = '';
+  todoList.textContent = '';
 })
 
 
