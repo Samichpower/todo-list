@@ -68,11 +68,12 @@ h1 {
 }
 
 .completed {
-  background-color: green;
+  color: white;
+  background-color: rgb(84, 211, 126);
 }
 
 .completed:hover {
-  background-color: green;
+  background-color: rgb(80, 200, 120);
 }
 
 
