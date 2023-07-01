@@ -56,13 +56,13 @@ h1 {
   list-style-type: none;
 }
 
-.todo-list li {
+.current-task {
   background-color:whitesmoke;
   margin: 5px 0px;
   padding: 9px;
 }
 
-.todo-list .completed {
+.completed {
   background-color: green;
 }
 

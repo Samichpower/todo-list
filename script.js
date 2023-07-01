@@ -10,6 +10,7 @@ function createNewListItem() {
   const newListItem = document.createElement('li');
   const deleteButton = document.createElement('button');
 
+  newListItem.classList.add('current-task');
   newListItem.addEventListener('click', () => {
     newListItem.classList.toggle('completed');
   })
