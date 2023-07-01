@@ -13,6 +13,7 @@ function createNewListItem() {
   newListItem.classList.add('current-task');
   newListItem.addEventListener('click', () => {
     newListItem.classList.toggle('completed');
+    getTotalPendingTasks();
   })
 
   if (itemContentInput.value != '') {
@@ -35,7 +36,6 @@ function createNewListItem() {
 
 
 
-
 function getTotalPendingTasks() {
   const pendingTaskDisplay = document.getElementById('pending-tasks');
   let completedTasks = document.querySelectorAll('.completed').length;
@@ -48,6 +48,7 @@ clearAllButton.addEventListener('click', () => {
   while (todoList.firstChild) {
     todoList.removeChild(todoList.lastChild);
   }
+  getTotalPendingTasks();
 })
 
 
