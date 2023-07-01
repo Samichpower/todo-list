@@ -30,9 +30,18 @@ function createNewListItem() {
   newListItem.prepend(deleteButton);
   todoList.appendChild(newListItem);
   itemContentInput.value = '';
+  getTotalPendingTasks();
 }
 
 
+
+
+function getTotalPendingTasks() {
+  const pendingTaskDisplay = document.getElementById('pending-tasks');
+  let completedTasks = document.querySelectorAll('.completed').length;
+  let pendingTasks = document.querySelectorAll('.current-task').length - completedTasks;
+  pendingTaskDisplay.textContent = pendingTasks;
+}
 
 const clearAllButton = document.getElementById('clear-all');
 clearAllButton.addEventListener('click', () => {
