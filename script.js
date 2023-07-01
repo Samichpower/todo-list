@@ -2,6 +2,13 @@
 
 const addNewItem = document.querySelector('#new-li-button');
 const todoList = document.querySelector('.todo-list')
+const form = document.getElementById('new-todo');
+
+form.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+  }
+})
 
 addNewItem.addEventListener('click', () => {
   let itemContentInput = document.getElementById('add-new');
