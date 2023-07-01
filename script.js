@@ -34,7 +34,9 @@ function createNewListItem() {
 
 const clearAllButton = document.getElementById('clear-all');
 clearAllButton.addEventListener('click', () => {
-  todoList.textContent = '';
+  while (todoList.firstChild) {
+    todoList.removeChild(todoList.lastChild);
+  }
 })
 
 
