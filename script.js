@@ -4,7 +4,7 @@ const addNewItem = document.querySelector('#new-li-button');
 const todoList = document.querySelector('.todo-list')
 
 addNewItem.addEventListener('click', () => {
-  let itemContent = document.getElementById('add-new');
+  let itemContentInput = document.getElementById('add-new');
   const newListItem = document.createElement('li');
   const newCheckbox = document.createElement('input');
   const deleteButton = document.createElement('button');
@@ -13,8 +13,8 @@ addNewItem.addEventListener('click', () => {
   newCheckbox.className = 'checkbox';
   deleteButton.className = 'delete-button';
 
-  if (itemContent.value != '') {
-    newListItem.textContent = itemContent.value;
+  if (itemContentInput.value != '') {
+    newListItem.textContent = itemContentInput.value;
   } else {
     return;
   }
@@ -28,5 +28,5 @@ addNewItem.addEventListener('click', () => {
   newListItem.prepend(newCheckbox);
   newListItem.prepend(deleteButton);
   todoList.appendChild(newListItem);
-  itemContent.value = '';
+  itemContentInput.value = '';
 })
