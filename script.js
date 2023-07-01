@@ -8,7 +8,7 @@ const todoList = document.querySelector('.todo-list')
 function createNewListItem() {
   let itemContentInput = document.getElementById('add-new');
   const newListItem = document.createElement('li');
-  const deleteButton = document.createElement('button');
+  const deleteButton = document.createElement('div');
 
   newListItem.classList.add('current-task');
   newListItem.addEventListener('click', () => {
@@ -28,7 +28,7 @@ function createNewListItem() {
     newListItem.remove();
   })
 
-  newListItem.prepend(deleteButton);
+  newListItem.appendChild(deleteButton);
   todoList.appendChild(newListItem);
   itemContentInput.value = '';
   getTotalPendingTasks();
