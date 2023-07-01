@@ -95,3 +95,7 @@ h1 {
   border: 0px;
   border-radius: 3px;
 }
+
+.button-style:hover {
+  background-color:rgb(141, 69, 209);
+}
