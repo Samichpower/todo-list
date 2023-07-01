@@ -58,11 +58,20 @@ h1 {
 
 .current-task {
   background-color:whitesmoke;
+  border-radius: 3px;
   margin: 5px 0px;
   padding: 9px;
 }
 
+.current-task:hover {
+  background-color: rgb(228, 228, 228);
+}
+
 .completed {
+  background-color: green;
+}
+
+.completed:hover {
   background-color: green;
 }
 
