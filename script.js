@@ -13,7 +13,12 @@ addNewItem.addEventListener('click', () => {
   newCheckbox.className = 'checkbox';
   deleteButton.className = 'delete-button';
 
-  newListItem.textContent = itemContent.value;
+  if (itemContent.value != '') {
+    newListItem.textContent = itemContent.value;
+  } else {
+    return;
+  }
+  
   deleteButton.textContent = 'X';
 
   deleteButton.addEventListener('click', () => {
