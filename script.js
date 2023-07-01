@@ -1,4 +1,4 @@
-//FIRST STEP: Get the input text as the list item
+//NEXT STEP: Get Clear All button to work
 
 const addNewItem = document.querySelector('#new-li-button');
 const todoList = document.querySelector('.todo-list')
@@ -31,6 +31,11 @@ function createNewListItem() {
   todoList.appendChild(newListItem);
   itemContentInput.value = '';
 }
+
+const clearAllButton = document.getElementById('clear-all');
+clearAllButton.addEventListener('click', () => {
+  todoList.innerHTML = '';
+})
 
 
 const form = document.getElementById('new-todo');
