@@ -62,6 +62,10 @@ h1 {
   padding: 9px;
 }
 
+.todo-list .completed {
+  background-color: green;
+}
+
 
 .bottom-content {
   display: flex;

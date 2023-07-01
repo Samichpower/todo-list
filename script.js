@@ -1,4 +1,4 @@
-//NEXT STEP: Get Clear All button to work
+//NEXT STEP: Do proper formatting for the list items. Remove checkbox/X. Add trash can to right side, click the element to 'check' it off. Let's start with the checkbox.
 
 const addNewItem = document.querySelector('#new-li-button');
 const todoList = document.querySelector('.todo-list')
@@ -7,30 +7,27 @@ const todoList = document.querySelector('.todo-list')
 function createNewListItem() {
   let itemContentInput = document.getElementById('add-new');
   const newListItem = document.createElement('li');
-  const newCheckbox = document.createElement('input');
   const deleteButton = document.createElement('button');
 
-  newCheckbox.setAttribute('type', 'checkbox');
-  newCheckbox.className = 'checkbox';
-  deleteButton.className = 'delete-button';
+  newListItem.className = 'not-completed';
 
   if (itemContentInput.value != '') {
     newListItem.textContent = itemContentInput.value;
   } else {
     return;
   }
-  
-  deleteButton.textContent = 'X';
 
+  deleteButton.className = 'delete-button';
+  deleteButton.textContent = 'X';
   deleteButton.addEventListener('click', () => {
     newListItem.remove();
   })
 
-  newListItem.prepend(newCheckbox);
   newListItem.prepend(deleteButton);
   todoList.appendChild(newListItem);
   itemContentInput.value = '';
 }
+
 
 const clearAllButton = document.getElementById('clear-all');
 clearAllButton.addEventListener('click', () => {
@@ -48,6 +45,4 @@ form.addEventListener('keypress', (e) => {
   }
 })
 
-addNewItem.addEventListener('click', () => {
-  createNewListItem();
-})
+addNewItem.addEventListener('click', createNewListItem);
