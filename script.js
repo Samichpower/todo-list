@@ -1,4 +1,4 @@
-//NEXT STEP: Do proper formatting for the list items. Remove checkbox/X. Add trash can to right side, click the element to 'check' it off. Let's start with the checkbox.
+//NEXT STEP: Remove X and add red container to right side that appears on hover.
 
 const addNewItem = document.querySelector('#new-li-button');
 const todoList = document.querySelector('.todo-list')
