@@ -4,12 +4,15 @@ const addNewItem = document.querySelector('#new-li-button');
 const todoList = document.querySelector('.todo-list')
 
 
+
 function createNewListItem() {
   let itemContentInput = document.getElementById('add-new');
   const newListItem = document.createElement('li');
   const deleteButton = document.createElement('button');
 
-  newListItem.className = 'not-completed';
+  newListItem.addEventListener('click', () => {
+    newListItem.classList.toggle('completed');
+  })
 
   if (itemContentInput.value != '') {
     newListItem.textContent = itemContentInput.value;
@@ -27,6 +30,7 @@ function createNewListItem() {
   todoList.appendChild(newListItem);
   itemContentInput.value = '';
 }
+
 
 
 const clearAllButton = document.getElementById('clear-all');
