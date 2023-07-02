@@ -9,6 +9,9 @@ function createNewListItem() {
   let itemContentInput = document.getElementById('add-new');
   const newListItem = document.createElement('li');
   const deleteButton = document.createElement('div');
+  const deleteIcon = document.createElement('img');
+  deleteIcon.src = 'images/trash-can.png';
+  deleteIcon.className = 'trash-can-icon';
 
   newListItem.classList.add('current-task');
   newListItem.addEventListener('click', () => {
@@ -23,7 +26,7 @@ function createNewListItem() {
   }
 
   deleteButton.className = 'delete-button';
-  deleteButton.textContent = 'X';
+  deleteButton.appendChild(deleteIcon);
   deleteButton.addEventListener('click', () => {
     newListItem.remove();
   })
