@@ -1,10 +1,5 @@
-//NEXT STEP: Remove X and add red container to right side that appears on hover.
-//WHAT I WANT TO HAPPEN: I hover over the div and the trash can and red background slides in to fill it.
-
 const addNewItem = document.querySelector('#new-li-button');
 const todoList = document.querySelector('.todo-list')
-
-
 
 function createNewListItem() {
   let itemContentInput = document.getElementById('add-new');
@@ -41,7 +36,6 @@ function createNewListItem() {
 }
 
 
-
 function getTotalPendingTasks() {
   const pendingTaskDisplay = document.getElementById('pending-tasks');
   let completedTasks = document.querySelectorAll('.completed').length;
@@ -56,7 +50,6 @@ clearAllButton.addEventListener('click', () => {
   }
   getTotalPendingTasks();
 })
-
 
 const form = document.getElementById('new-todo');
 form.addEventListener('keypress', (e) => {
