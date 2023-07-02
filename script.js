@@ -1,4 +1,5 @@
 //NEXT STEP: Remove X and add red container to right side that appears on hover.
+//WHAT I WANT TO HAPPEN: I hover over the div and the trash can and red background slides in to fill it.
 
 const addNewItem = document.querySelector('#new-li-button');
 const todoList = document.querySelector('.todo-list')
@@ -9,10 +10,6 @@ function createNewListItem() {
   let itemContentInput = document.getElementById('add-new');
   const newListItem = document.createElement('li');
   const deleteButton = document.createElement('div');
-  const deleteIcon = document.createElement('img');
-  deleteIcon.src = 'images/trash-can.png';
-  deleteIcon.alt = 'Trash can icon';
-  deleteIcon.className = 'trash-can-icon';
 
   newListItem.classList.add('current-task');
   newListItem.addEventListener('click', () => {
@@ -25,6 +22,11 @@ function createNewListItem() {
   } else {
     return;
   }
+
+  const deleteIcon = document.createElement('img');
+  deleteIcon.src = 'images/trash-can-full.png';
+  deleteIcon.alt = 'Trash can icon';
+  deleteIcon.className = 'trash-can-icon';
 
   deleteButton.className = 'delete-button';
   deleteButton.appendChild(deleteIcon);
