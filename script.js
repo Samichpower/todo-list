@@ -11,6 +11,7 @@ function createNewListItem() {
   const deleteButton = document.createElement('div');
   const deleteIcon = document.createElement('img');
   deleteIcon.src = 'images/trash-can.png';
+  deleteIcon.alt = 'Trash can icon';
   deleteIcon.className = 'trash-can-icon';
 
   newListItem.classList.add('current-task');
