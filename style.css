@@ -95,7 +95,7 @@ h1 {
   max-height: 100%;
   padding-left: 50px;
   margin: auto;
-  transition: transform .1s ease-in-out;
+  transition: transform .07s ease-in-out;
 }
 
 .trash-can-icon:hover {
